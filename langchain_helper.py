@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def generate_book_desc(book_name):
-    llm = OpenAI(temperature=0.7)
+    llm = OpenAI(temperature=0.7, model="gpt-3.5-turbo")
 
     prompt_template_name = PromptTemplate(
         input_variables=['book_name'],
